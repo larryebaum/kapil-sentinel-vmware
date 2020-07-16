@@ -10,17 +10,17 @@ module "tfconfig-functions" {
     source = "../common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 }
 
-policy "restrict-vm-cpu-and-memory" {
+policy "vm-cpu-memory-advice" {
     source = "./restrict-vm-cpu-and-memory.sentinel"
     enforcement_level = "advisory"
 }
 
-policy "restrict-vm-cpu-and-memory" {
+policy "vm-cpu-memory-override-required" {
     source = "./restrict-vm-cpu-and-memory_8_8192.sentinel"
     enforcement_level = "soft-mandatory"
 }
 
-policy "restrict-vm-cpu-and-memory" {
+policy "vm-cpu-memory-not-allowed" {
     source = "./restrict-vm-cpu-and-memory_12_12288 copy.sentinel"
     enforcement_level = "hard-mandatory"
 }
