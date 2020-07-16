@@ -1,4 +1,4 @@
-# This policy restricts that VMware VMs above
+# This policy restricts VMware VMs above
 # 12288 MB memory and 812 cpus 
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel

@@ -10,7 +10,7 @@ module "tfconfig-functions" {
     source = "../common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 }
 
-policy "vm-cpu-memory-advice" {
+policy "More than 4 cpus and 4096 mb memory" {
     source = "./restrict-vm-cpu-and-memory.sentinel"
     enforcement_level = "advisory"
 }
