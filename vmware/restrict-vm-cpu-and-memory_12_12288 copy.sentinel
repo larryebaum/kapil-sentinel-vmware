@@ -1,13 +1,13 @@
-# This policy checks if VMware VMs cross
-# 4096 MB memory and 4 cpu limit
+# This policy restricts that VMware VMs above
+# 12288 MB memory and 812 cpus 
 
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with alias "plan"
 import "tfplan-functions" as plan
 
 # CPU and Memory (MB) Limits
-maxCPUs = 4
-maxMemory = 4096
+maxCPUs = 12
+maxMemory = 12288
 
 # Get all VMs
 allVMs = plan.find_resources("vsphere_virtual_machine")
