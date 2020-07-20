@@ -24,6 +24,15 @@ highMemoryVMs = plan.filter_attribute_greater_than_value(allVMs,
 
 # Main rule
 validated = length(highCPUVMs["messages"]) is 0 and length(highMemoryVMs["messages"]) is 0
+
+# Add print output to make it clear to user why the rule failed.
+if length(highCPUVMs["messages"]) is > 0 {
+  print("This policy prevents a user from requesting more than 4 CPUs for a VM without obtaining supervisor approval.")
+}
+if length(highMemoryVMs["messages"]) is > 0 {
+  print("This policy prevents a user from requesting more than 4096 for a VM without obtaining supervisor approval.")
+}
+
 main = rule {
   validated
 }
