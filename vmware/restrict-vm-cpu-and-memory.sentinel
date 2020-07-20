@@ -27,10 +27,10 @@ validated = length(highCPUVMs["messages"]) is 0 and length(highMemoryVMs["messag
 
 # Add print output to make it clear to user why the rule failed.
 if length(highCPUVMs["messages"]) > 0 {
-  print("This policy prevents a user from requesting more than ", maxCPUs, " CPUs for a VM without obtaining supervisor approval.")
+  print("POLICY VIOLATION: This policy prevents a user from requesting more than", maxCPUs, "CPUs for a VM without obtaining supervisor approval.")
 }
 if length(highMemoryVMs["messages"]) > 0 {
-  print("This policy prevents a user from requesting more than ", maxMemory, " 4096 for a VM without obtaining supervisor approval.")
+  print("POLICY VIOLATION: This policy prevents a user from requesting more than", maxMemory, "4096 for a VM without obtaining supervisor approval.")
 }
 
 main = rule {
